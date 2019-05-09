@@ -5,6 +5,7 @@ import {angularMaterialRenderers} from '@jsonforms/angular-material';
 import {CustomAutocompleteControlRenderer} from './custom.autocomplete';
 import {LangComponent} from './lang.control';
 import { DataDisplayComponent } from './data.control';
+import { UnknownRendererComponent } from './unknown.renderer';
 
 export const rootReducer: Reducer<JsonFormsState> = combineReducers({ jsonforms: jsonformsReducer() });
 
@@ -38,7 +39,13 @@ export const initialState: any = {
           )
         )
       },
-    ],
-    fields: [],
+      {
+        renderer: UnknownRendererComponent,
+        tester: rankWith(
+          0,
+          () => true
+        )
+      }
+    ]
   }
 };

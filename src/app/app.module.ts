@@ -20,13 +20,15 @@ import { LangComponent } from './lang.control';
 import { DataDisplayComponent } from './data.control';
 import { JsonFormsModule } from '@jsonforms/angular';
 import { LocaleValidationModule, TranslationModule } from 'angular-l10n';
+import { UnknownRendererComponent } from './unknown.renderer';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomAutocompleteControlRenderer,
     LangComponent,
-    DataDisplayComponent
+    DataDisplayComponent,
+    UnknownRendererComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { LocaleValidationModule, TranslationModule } from 'angular-l10n';
   ],
   schemas: [],
   providers: [],
-  entryComponents: [CustomAutocompleteControlRenderer, LangComponent, DataDisplayComponent],
+  entryComponents: [CustomAutocompleteControlRenderer, LangComponent, DataDisplayComponent, UnknownRendererComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

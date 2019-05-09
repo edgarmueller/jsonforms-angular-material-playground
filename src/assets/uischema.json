@@ -23,6 +23,10 @@
                     {
                       "type": "Control",
                       "scope": "#/properties/processId"
+                    },
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/test"
                     }
                   ]
                 },
